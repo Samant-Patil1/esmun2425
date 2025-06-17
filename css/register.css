@@ -1,5 +1,22 @@
 /* Register Page Specific Styles */
 
+/* Import typography variables if not already available */
+:root {
+    --font-primary: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Space Grotesk', 'Outfit', 'Inter', sans-serif;
+    --font-ui: 'Inter', sans-serif;
+    
+    --leading-tight: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+}
+
 .register-hero {
     padding: 8rem 0 4rem;
     text-align: center;
@@ -7,10 +24,14 @@
 }
 
 .register-hero h1 {
+    font-family: var(--font-display, 'Space Grotesk', 'Inter', sans-serif);
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
     margin-bottom: 1rem;
     color: #4fc3f7;
+    letter-spacing: var(--tracking-tight, -0.025em);
+    line-height: var(--leading-tight, 1.25);
+    font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .register-hero p {
@@ -31,10 +52,14 @@
 }
 
 .pricing-header h2 {
+    font-family: var(--font-display, 'Space Grotesk', 'Inter', sans-serif);
     font-size: 2.5rem;
     color: #4fc3f7;
     margin-bottom: 1rem;
     font-weight: 700;
+    letter-spacing: var(--tracking-tight, -0.025em);
+    line-height: var(--leading-tight, 1.25);
+    font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .pricing-header p {
@@ -128,10 +153,14 @@
 }
 
 .card-header h3 {
+    font-family: var(--font-display, 'Space Grotesk', 'Inter', sans-serif);
     font-size: 1.8rem;
     color: white;
     margin-bottom: 1rem;
     font-weight: 600;
+    letter-spacing: var(--tracking-normal, 0em);
+    line-height: var(--leading-tight, 1.25);
+    font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .price {
@@ -150,9 +179,12 @@
 }
 
 .amount {
+    font-family: var(--font-display, 'Space Grotesk', 'Inter', sans-serif);
     font-size: 3rem;
     color: white;
     font-weight: 800;
+    font-feature-settings: 'tnum' 1, 'lnum' 1;
+    font-variant-numeric: tabular-nums lining-nums;
 }
 
 .original-price {
@@ -188,6 +220,7 @@
 
 .register-button {
     width: 100%;
+    font-family: var(--font-ui, 'Inter', sans-serif);
     padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
@@ -196,7 +229,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--tracking-wide, 0.025em);
+    text-transform: uppercase;
+    font-feature-settings: 'kern' 1, 'case' 1;
+    text-rendering: optimizeLegibility;
 }
 
 .student-btn {
@@ -241,10 +277,14 @@
 
 .included-section h2 {
     text-align: center;
+    font-family: var(--font-display, 'Space Grotesk', 'Inter', sans-serif);
     font-size: 2.5rem;
     color: #4fc3f7;
     margin-bottom: 3rem;
     font-weight: 700;
+    letter-spacing: var(--tracking-tight, -0.025em);
+    line-height: var(--leading-tight, 1.25);
+    font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .included-grid {
