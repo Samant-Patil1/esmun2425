@@ -14,7 +14,12 @@ body {
     background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 100%);
     color: white;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -185,17 +190,26 @@ nav {
     background: 
         radial-gradient(circle at 20% 80%, rgba(79, 195, 247, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(41, 182, 246, 0.1) 0%, transparent 50%);
+    padding: 8rem 2rem 2rem;
+    overflow: hidden;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     animation: fadeInUp 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
     font-size: clamp(3rem, 8vw, 8rem);
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 1rem;
     background: linear-gradient(135deg, #ffffff, #4fc3f7, #29b6f6);
     background-size: 200% 200%;
@@ -203,8 +217,9 @@ nav {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: gradientShift 3s ease-in-out infinite;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     text-shadow: 0 0 40px rgba(79, 195, 247, 0.3);
+    font-feature-settings: 'liga' on, 'calt' on;
 }
 
 .title-line {
@@ -214,19 +229,25 @@ nav {
 
 .hero-subtitle {
     font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: #4fc3f7;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     animation: pulse 2s ease-in-out infinite;
+    text-transform: uppercase;
+    font-feature-settings: 'smcp' on;
 }
 
 .hero-description {
     font-size: clamp(1rem, 2vw, 1.5rem);
     margin-bottom: 3rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 300;
-    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
@@ -234,6 +255,87 @@ nav {
     gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+/* Countdown Timer Styles */
+.countdown-container {
+    margin: 1.5rem auto 1.5rem;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(79, 195, 247, 0.2);
+    max-width: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-label {
+    color: #4fc3f7;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    text-align: center;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    text-align: center;
+    background: rgba(79, 195, 247, 0.1);
+    border-radius: 12px;
+    padding: 0.8rem 0.6rem;
+    min-width: 70px;
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    transition: all 0.3s ease;
+}
+
+.countdown-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+}
+
+.countdown-number {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+
+.countdown-text {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.countdown-date {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.countdown-date p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
 }
 
 /* Button Styles */
@@ -247,7 +349,11 @@ nav {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -296,13 +402,14 @@ nav {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     animation: bounce 2s infinite;
+    z-index: 2;
 }
 
 .scroll-arrow {
@@ -317,15 +424,20 @@ nav {
 /* Updates Section */
 .updates-section {
     padding: 6rem 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 1;
 }
 
 .updates-section h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.8rem);
     margin-bottom: 3rem;
     color: #4fc3f7;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
 }
 
 .updates-grid {
@@ -594,6 +706,11 @@ nav {
         display: flex;
     }
     
+    .hero {
+        padding: 6rem 1rem 2rem;
+        height: 100vh;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -622,9 +739,38 @@ nav {
     .container {
         padding: 0 1rem;
     }
+    
+    /* Countdown responsive styles */
+    .countdown-timer {
+        gap: 0.8rem;
+    }
+    
+    .countdown-item {
+        min-width: 60px;
+        padding: 0.6rem 0.4rem;
+    }
+    
+    .countdown-number {
+        font-size: 1.3rem;
+    }
+    
+    .countdown-container {
+        padding: 1.2rem;
+        margin: 1.5rem auto 1.5rem;
+        max-width: 400px;
+    }
+    
+    .countdown-label {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 5rem 1rem 1rem;
+        height: 100vh;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
@@ -635,5 +781,42 @@ nav {
     
     .hero-description {
         font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        margin-bottom: 0;
+    }
+    
+    /* Countdown mobile styles */
+    .countdown-timer {
+        gap: 0.5rem;
+    }
+    
+    .countdown-item {
+        min-width: 55px;
+        padding: 0.5rem 0.3rem;
+    }
+    
+    .countdown-number {
+        font-size: 1.1rem;
+    }
+    
+    .countdown-text {
+        font-size: 0.65rem;
+    }
+    
+    .countdown-container {
+        padding: 1rem;
+        margin: 1rem auto 1rem;
+        max-width: 320px;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .countdown-date p {
+        font-size: 0.8rem;
     }
 }

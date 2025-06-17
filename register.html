@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ESMUN 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">ESMUN</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                <li><a href="register.html" class="register-btn">REGISTER</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Register Hero -->
+    <section class="register-hero">
+        <div class="container">
+            <h1>Register for ESMUN 2025</h1>
+            <p>Choose your registration option and secure your spot at this premier Model United Nations conference</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-header">
+                <h2>Registration Options</h2>
+                <p>Select the option that works best for you</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Student Registration -->
+                <div class="pricing-card student-card">
+                    <div class="card-header">
+                        <div class="card-icon">🎓</div>
+                        <h3>Student Registration</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">1000</span>
+                        </div>
+                        <p class="price-note">For verified students</p>
+                    </div>
+                    
+                    <div class="card-features">
+                        <ul>
+                            <li>✅ Full conference access</li>
+                            <li>✅ All committee sessions</li>
+                            <li>✅ Study materials</li>
+                            <li>✅ Meals included</li>
+                            <li>✅ Certificate of participation</li>
+                            <li>✅ Networking opportunities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <button class="register-button student-btn" onclick="registerStudent()">
+                            Register as Student
+                        </button>
+                        <p class="requirements">*Valid student ID required</p>
+                    </div>
+                </div>
+
+                <!-- Early Bird Registration -->
+                <div class="pricing-card early-bird-card featured">
+                    <div class="featured-badge">BEST VALUE</div>
+                    <div class="card-header">
+                        <div class="card-icon">🐦</div>
+                        <h3>Early Bird</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">1100</span>
+                            <span class="original-price">₹1200</span>
+                        </div>
+                        <p class="price-note">Limited time offer</p>
+                    </div>
+                    
+                    <div class="card-features">
+                        <ul>
+                            <li>✅ Full conference access</li>
+                            <li>✅ All committee sessions</li>
+                            <li>✅ Premium study materials</li>
+                            <li>✅ All meals included</li>
+                            <li>✅ Certificate of participation</li>
+                            <li>✅ Networking opportunities</li>
+                            <li>✅ Priority committee selection</li>
+                            <li>✅ Welcome kit</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <button class="register-button early-bird-btn" onclick="registerEarlyBird()">
+                            Register Early Bird
+                        </button>
+                        <p class="requirements">*Save ₹100 - Limited spots!</p>
+                    </div>
+                </div>
+
+                <!-- Current Price Registration -->
+                <div class="pricing-card current-card disabled">
+                    <div class="card-header">
+                        <div class="card-icon">💼</div>
+                        <h3>Current Price</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">1200</span>
+                        </div>
+                        <p class="price-note">Standard registration</p>
+                    </div>
+                    
+                    <div class="card-features">
+                        <ul>
+                            <li>✅ Full conference access</li>
+                            <li>✅ All committee sessions</li>
+                            <li>✅ Study materials</li>
+                            <li>✅ Meals included</li>
+                            <li>✅ Certificate of participation</li>
+                            <li>✅ Networking opportunities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <button class="register-button current-btn disabled" disabled>
+                            Available Soon
+                        </button>
+                        <p class="requirements">*Available after early bird period</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="included-section">
+        <div class="container">
+            <h2>What's Included in Your Registration</h2>
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">📚</div>
+                    <h3>Study Materials</h3>
+                    <p>Comprehensive background guides, position papers, and research resources for all committees.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">🍽️</div>
+                    <h3>Meals & Refreshments</h3>
+                    <p>All meals during the conference including breakfast, lunch, dinner, and refreshment breaks.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">🏆</div>
+                    <h3>Certificates & Awards</h3>
+                    <p>Certificate of participation and opportunity to win awards for outstanding performance.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">🤝</div>
+                    <h3>Networking Events</h3>
+                    <p>Connect with fellow delegates, chairs, and distinguished guests during social events.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">🎒</div>
+                    <h3>Conference Kit</h3>
+                    <p>Welcome bag with conference materials, stationery, and branded merchandise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What documents do I need for student registration?</h3>
+                    <p>You'll need a valid student ID card, fee receipt, or enrollment certificate from your educational institution.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I change my committee preference after registration?</h3>
+                    <p>Committee changes are subject to availability and must be requested within 7 days of registration.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is the refund policy?</h3>
+                    <p>Full refunds are available up to 20 days before the conference. After that, a 50% refund is applicable.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are there group discounts available?</h3>
+                    <p>Yes! Groups of 5 or more from the same institution get a 10% discount. Contact us for group registration.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I bring to the conference?</h3>
+                    <p>Formal attire, notebook, pen, laptop (optional), and your registration confirmation email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Need Help with Registration?</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>registration@esmun2025.com</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone Support</h3>
+                    <p>+91 XXXXX XXXXX</p>
+                    <p>Mon-Fri, 9 AM - 6 PM</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>+91 XXXXX XXXXX</p>
+                    <p>Quick responses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ESMUN 2025</h3>
+                    <p>Empowering tomorrow's leaders through diplomacy and debate.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Committees</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html#aippm">AIPPM</a></li>
+                        <li><a href="resources.html#unsc">UNSC</a></li>
+                        <li><a href="resources.html#unhrc">UNHRC</a></li>
+                        <li><a href="resources.html#disec">DISEC</a></li>
+                        <li><a href="resources.html#ccc">CCC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📧 info@esmun2025.com</p>
+                        <p>📱 +91 XXXXX XXXXX</p>
+                        <p>📍 Location TBA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ESMUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

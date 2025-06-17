@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - ESMUN 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .resources-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
+        }
+        
+        .resources-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #4fc3f7;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+        }
+        
+        .resources-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .resource-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(79, 195, 247, 0.1);
+        }
+        
+        .resource-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .resource-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .resource-header h2 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            color: #4fc3f7;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+        }
+        
+        .resource-header .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .info-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(79, 195, 247, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 195, 247, 0.4);
+            box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+        }
+        
+        .info-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .info-card h3 {
+            color: #4fc3f7;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+        }
+        
+        .info-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        .esmun-details {
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .detail-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(79, 195, 247, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 195, 247, 0.4);
+            box-shadow: 0 10px 30px rgba(79, 195, 247, 0.2);
+        }
+        
+        .detail-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-card h3 {
+            color: #4fc3f7;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+        }
+        
+        .detail-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            color: #4fc3f7;
+            font-weight: 600;
+        }
+        
+        .committees-preview {
+            padding: 4rem 0;
+        }
+        
+        .committees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .committee-preview {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(79, 195, 247, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .committee-preview:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 195, 247, 0.4);
+            box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+        }
+        
+        .committee-preview h3 {
+            color: #4fc3f7;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+        }
+        
+        .committee-preview p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .committee-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .committee-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">ESMUN</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                <li><a href="register.html" class="register-btn">REGISTER</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Resources Hero -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>About ESMUN 2025</h1>
+            <p>Learn about Model United Nations and get all the details about ESMUN 2025</p>
+        </div>
+    </section>
+
+    <!-- What is MUN Section -->
+    <section class="resource-section">
+        <div class="container">
+            <div class="resource-header">
+                <h2>What is Model United Nations?</h2>
+                <p class="subtitle">Empowering tomorrow's leaders through diplomacy and debate</p>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-icon">🌍</span>
+                    <h3>Global Perspective</h3>
+                    <p>Experience international diplomacy by representing different countries and their perspectives on global issues. Understand complex geopolitical scenarios through role-playing.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🎭</span>
+                    <h3>Role Playing</h3>
+                    <p>Step into the shoes of diplomats, ambassadors, and world leaders. Debate pressing international matters while staying true to your assigned country's position.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">💬</span>
+                    <h3>Debate & Discussion</h3>
+                    <p>Engage in structured debates, negotiations, and consensus-building. Learn the art of diplomacy through formal and informal diplomatic interactions.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🏆</span>
+                    <h3>Skill Development</h3>
+                    <p>Enhance your public speaking, research, writing, and critical thinking abilities in a competitive yet collaborative environment.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🤝</span>
+                    <h3>Networking</h3>
+                    <p>Connect with like-minded students from diverse backgrounds. Build lasting friendships and professional networks with future leaders.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📚</span>
+                    <h3>Real-World Learning</h3>
+                    <p>Apply classroom knowledge to real-world scenarios. Understand how international organizations work and how global decisions are made.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESMUN Details Section -->
+    <section class="esmun-details">
+        <div class="container">
+            <div class="resource-header">
+                <h2>ESMUN 2025 Details</h2>
+                <p class="subtitle">Everything you need to know about the conference</p>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="icon">📅</div>
+                    <h3>Conference Dates</h3>
+                    <p><span class="highlight">July 24-26, 2025</span></p>
+                    <p>3-day intensive conference</p>
+                    <p>Opening ceremony on July 24, 8:00 AM</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">📍</div>
+                    <h3>Venue</h3>
+                    <p><span class="highlight">To Be Announced</span></p>
+                    <p>Prime location in the city</p>
+                    <p>Easily accessible by public transport</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">👥</div>
+                    <h3>Expected Participants</h3>
+                    <p><span class="highlight">200+ Delegates</span></p>
+                    <p>Students from across the country</p>
+                    <p>Diverse representation from schools and colleges</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">🏛️</div>
+                    <h3>Committees</h3>
+                    <p><span class="highlight">5 Dynamic Committees</span></p>
+                    <p>AIPPM, UNSC, UNHRC, DISEC, CCC</p>
+                    <p>Something for every interest level</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">🎯</div>
+                    <h3>Conference Theme</h3>
+                    <p><span class="highlight">"Shaping Tomorrow's World"</span></p>
+                    <p>Focus on contemporary global challenges</p>
+                    <p>Innovative solutions for the future</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">🏆</div>
+                    <h3>Awards & Recognition</h3>
+                    <p><span class="highlight">Multiple Award Categories</span></p>
+                    <p>Best Delegate, Outstanding Performance</p>
+                    <p>Certificates for all participants</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">🍽️</div>
+                    <h3>Meals & Refreshments</h3>
+                    <p><span class="highlight">All Meals Included</span></p>
+                    <p>Breakfast, lunch, and dinner</p>
+                    <p>Tea/coffee breaks between sessions</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="icon">👔</div>
+                    <h3>Dress Code</h3>
+                    <p><span class="highlight">Formal Attire Required</span></p>
+                    <p>Business professional for all sessions</p>
+                    <p>Cultural evening: Smart casual</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committees Preview -->
+    <section class="committees-preview">
+        <div class="container">
+            <div class="resource-header">
+                <h2>Our Committees</h2>
+                <p class="subtitle">Explore detailed information about each committee</p>
+            </div>
+            
+            <div class="committees-grid">
+                <div class="committee-preview">
+                    <h3>AIPPM</h3>
+                    <p>All India Political Parties Meet</p>
+                    <a href="aippm.html" class="committee-link">Learn More</a>
+                </div>
+                
+                <div class="committee-preview">
+                    <h3>UNSC</h3>
+                    <p>United Nations Security Council</p>
+                    <a href="unsc.html" class="committee-link">Learn More</a>
+                </div>
+                
+                <div class="committee-preview">
+                    <h3>UNHRC</h3>
+                    <p>UN Human Rights Council</p>
+                    <a href="unhrc.html" class="committee-link">Learn More</a>
+                </div>
+                
+                <div class="committee-preview">
+                    <h3>DISEC</h3>
+                    <p>Disarmament & International Security</p>
+                    <a href="disec.html" class="committee-link">Learn More</a>
+                </div>
+                
+                <div class="committee-preview">
+                    <h3>CCC</h3>
+                    <p>Crisis Control Committee</p>
+                    <a href="ccc.html" class="committee-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Next Section -->
+    <section class="resource-section">
+        <div class="container">
+            <div class="resource-header">
+                <h2>What's Next After Registration?</h2>
+                <p class="subtitle">Your journey to ESMUN 2025</p>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-icon">📝</span>
+                    <h3>1. Confirmation</h3>
+                    <p>Receive confirmation email with your delegate details, committee assignment, and country allocation within 48 hours of registration.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📚</span>
+                    <h3>2. Research Phase</h3>
+                    <p>Access exclusive study materials, background guides, and position paper templates for your assigned committee.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">💼</span>
+                    <h3>3. Preparation</h3>
+                    <p>Attend pre-conference workshops, webinars, and training sessions to enhance your MUN skills.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🎯</span>
+                    <h3>4. Conference Days</h3>
+                    <p>Participate in the main conference with opening ceremony, committee sessions, social events, and closing ceremony.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="register.html" class="btn btn-primary btn-large">Ready to Register?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- General MUN Tips -->
+    <section class="resource-section">
+        <div class="container">
+            <div class="resource-header">
+                <h2>MUN Tips for Success</h2>
+                <p class="subtitle">Essential advice for first-time and experienced delegates</p>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-icon">📖</span>
+                    <h3>Before the Conference</h3>
+                    <p>Research your country's position thoroughly, understand your committee's mandate, prepare your opening statement, and practice public speaking.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🎤</span>
+                    <h3>During the Conference</h3>
+                    <p>Stay in character, be respectful and diplomatic, participate actively in debates, and work collaboratively on resolutions.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">👔</span>
+                    <h3>Professional Conduct</h3>
+                    <p>Dress formally, use proper parliamentary language, respect the chair's authority, be punctual, and maintain decorum at all times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ESMUN 2025</h3>
+                    <p>Empowering tomorrow's leaders through diplomacy and debate.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Committees</h4>
+                    <ul class="footer-links">
+                        <li><a href="aippm.html">AIPPM</a></li>
+                        <li><a href="unsc.html">UNSC</a></li>
+                        <li><a href="unhrc.html">UNHRC</a></li>
+                        <li><a href="disec.html">DISEC</a></li>
+                        <li><a href="ccc.html">CCC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📧 info@esmun2025.com</p>
+                        <p>📱 +91 XXXXX XXXXX</p>
+                        <p>📍 Location TBA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ESMUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
