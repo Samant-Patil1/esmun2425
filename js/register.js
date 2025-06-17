@@ -3,7 +3,7 @@
 // Registration functions
 function registerStudent() {
     // Placeholder for Cashfree/Razorpay integration
-    alert('Student Registration\n\nYou will be redirected to the payment gateway.\n\nPrice: ₹799\nNote: Valid student ID required during verification.');
+    alert('Student Registration\n\nYou will be redirected to the payment gateway.\n\nPrice: ₹1000\nNote: Valid student ID required during verification.');
     
     // In actual implementation, you would integrate with Cashfree/Razorpay here
     // Example:
@@ -14,7 +14,7 @@ function registerStudent() {
 
 function registerEarlyBird() {
     // Placeholder for Cashfree/Razorpay integration
-    alert('Early Bird Registration\n\nYou will be redirected to the payment gateway.\n\nPrice: ₹999 (Save ₹300!)\nLimited time offer!');
+    alert('Early Bird Registration\n\nYou will be redirected to the payment gateway.\n\nPrice: ₹1100 (Save ₹100!)\nLimited time offer!');
     
     // In actual implementation, you would integrate with Cashfree/Razorpay here
     // Example:
@@ -100,37 +100,6 @@ function initializeRazorpay(amount, purpose) {
     // Razorpay integration code would go here
     console.log(`Initializing Razorpay payment: ₹${amount} for ${purpose}`);
     
-    // Example Razorpay implementation:
-    /*
-    var options = {
-        "key": "YOUR_RAZORPAY_KEY",
-        "amount": amount * 100, // Amount in paise
-        "currency": "INR",
-        "name": "ESMUN 2025",
-        "description": purpose,
-        "image": "https://your-logo-url.com/logo.png",
-        "handler": function (response) {
-            // Handle successful payment
-            console.log('Payment successful:', response.razorpay_payment_id);
-            redirectToSuccess(response);
-        },
-        "prefill": {
-            "name": "",
-            "email": "",
-            "contact": ""
-        },
-        "notes": {
-            "conference": "ESMUN 2025",
-            "registration_type": purpose
-        },
-        "theme": {
-            "color": "#4fc3f7"
-        }
-    };
-    
-    var rzp = new Razorpay(options);
-    rzp.open();
-    */
 }
 
 // Success page redirection
