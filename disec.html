@@ -1,21 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISEC - Disarmament and International Security | ESMUN 2025</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/committee.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+        <style>
+            .resources-hero {
+                padding: 8rem 0 4rem;
+                text-align: center;
+                background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
+            }
+    
+            .resources-hero h1 {
+                font-size: clamp(2.5rem, 6vw, 4rem);
+                font-weight: 800;
+                margin-bottom: 1rem;
+                color: #4fc3f7;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .resources-hero p {
+                font-size: 1.2rem;
+                color: rgba(255, 255, 255, 0.8);
+                max-width: 600px;
+                margin: 0 auto;
+            }
+    
+            .resource-section {
+                padding: 4rem 0;
+                border-bottom: 1px solid rgba(79, 195, 247, 0.1);
+            }
+    
+            .resource-section:last-of-type {
+                border-bottom: none;
+            }
+    
+            .resource-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+    
+            .resource-header h2 {
+                font-size: clamp(2rem, 5vw, 2.8rem);
+                color: #4fc3f7;
+                margin-bottom: 1rem;
+                font-weight: 800;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .resource-header .subtitle {
+                font-size: 1.2rem;
+                color: rgba(255, 255, 255, 0.7);
+                font-style: italic;
+            }
+    
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+    
+            .info-card {
+                text-align: center;
+                padding: 2rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 15px;
+                border: 1px solid rgba(79, 195, 247, 0.2);
+                transition: all 0.3s ease;
+            }
+    
+            .info-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(79, 195, 247, 0.4);
+                box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+            }
+    
+            .info-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                display: block;
+            }
+    
+            .info-card h3 {
+                color: #4fc3f7;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+                font-weight: 700;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .info-card p {
+                color: rgba(255, 255, 255, 0.8);
+                line-height: 1.6;
+            }
+    
+            .esmun-details {
+                background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
+                padding: 4rem 0;
+                margin: 4rem 0;
+            }
+    
+            .details-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+    
+            .detail-card {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(79, 195, 247, 0.2);
+                border-radius: 15px;
+                padding: 2rem;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+    
+            .detail-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(79, 195, 247, 0.4);
+                box-shadow: 0 10px 30px rgba(79, 195, 247, 0.2);
+            }
+    
+            .detail-card .icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+    
+            .detail-card h3 {
+                color: #4fc3f7;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .detail-card p {
+                color: rgba(255, 255, 255, 0.8);
+                line-height: 1.6;
+                margin-bottom: 0.5rem;
+            }
+    
+            .highlight {
+                color: #4fc3f7;
+                font-weight: 600;
+            }
+    
+            .committees-preview {
+                padding: 4rem 0;
+            }
+    
+            .committees-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+    
+            .committee-preview {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(79, 195, 247, 0.2);
+                border-radius: 15px;
+                padding: 1.5rem;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+    
+            .committee-preview:hover {
+                transform: translateY(-5px);
+                border-color: rgba(79, 195, 247, 0.4);
+                box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+            }
+    
+            .committee-preview h3 {
+                color: #4fc3f7;
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+                font-weight: 700;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .committee-preview p {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+    
+            .committee-link {
+                display: inline-block;
+                background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.8rem;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+    
+            .committee-link:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+            }
+        </style>
 </head>
+
 <body>
-    <!-- Animated background particles -->
+
     <div class="particles" id="particles"></div>
 
-    <!-- Header -->
+
     <header id="header">
         <nav>
             <a href="index.html" class="logo">ESMUN</a>
@@ -32,13 +242,14 @@
         </nav>
     </header>
 
-    <!-- Committee Hero -->
+
     <section class="committee-hero">
         <div class="container">
             <div class="committee-badge">🚀 COMMITTEE</div>
             <h1>DISEC</h1>
             <h2>Disarmament and International Security Committee</h2>
-            <p>The First Committee of the UN General Assembly dealing with global security challenges and disarmament</p>
+            <p>The First Committee of the UN General Assembly dealing with global security challenges and disarmament
+            </p>
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">193</span>
@@ -56,29 +267,38 @@
         </div>
     </section>
 
-    <!-- Committee Overview -->
+
     <section class="committee-overview">
         <div class="container">
             <div class="overview-grid">
                 <div class="overview-content">
                     <h2>About DISEC</h2>
-                    <p class="lead">The First Committee (Disarmament and International Security) deals with disarmament, global challenges and threats to peace that affect the international community and seeks out solutions to the challenges in the international security regime.</p>
-                    
-                    <p>DISEC addresses the whole range of armament and disarmament issues, from weapons of mass destruction to conventional arms, including issues related to international security. The committee considers all disarmament and international security matters included in the UN Charter or affecting the functions of any other organ of the United Nations.</p>
-                    
-                    <p>In ESMUN's DISEC simulation, delegates will tackle 21st-century security challenges including cyber warfare, space militarization, emerging technologies, and traditional disarmament issues. The committee requires analytical thinking and innovative approaches to complex security dilemmas.</p>
-                    
+                    <p class="lead">The First Committee (Disarmament and International Security) deals with disarmament,
+                        global challenges and threats to peace that affect the international community and seeks out
+                        solutions to the challenges in the international security regime.</p>
+
+                    <p>DISEC addresses the whole range of armament and disarmament issues, from weapons of mass
+                        destruction to conventional arms, including issues related to international security. The
+                        committee considers all disarmament and international security matters included in the UN
+                        Charter or affecting the functions of any other organ of the United Nations.</p>
+
+                    <p>In ESMUN's DISEC simulation, delegates will tackle 21st-century security challenges including
+                        cyber warfare, space militarization, emerging technologies, and traditional disarmament issues.
+                        The committee requires analytical thinking and innovative approaches to complex security
+                        dilemmas.</p>
+
                     <div class="key-features">
                         <h3>Key Features</h3>
                         <ul>
-                            <li><strong>Comprehensive Scope:</strong> All aspects of international security and disarmament</li>
+                            <li><strong>Comprehensive Scope:</strong> All aspects of international security and
+                                disarmament</li>
                             <li><strong>Emerging Technologies:</strong> AI, cyber warfare, and space security</li>
                             <li><strong>Global Participation:</strong> All UN member states participate</li>
                             <li><strong>Technical Expertise:</strong> Focus on scientific and technical aspects</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="overview-sidebar">
                     <div class="info-card">
                         <h3>Committee Information</h3>
@@ -99,7 +319,7 @@
                             <span class="value">General Assembly</span>
                         </div>
                     </div>
-                    
+
                     <div class="quick-links">
                         <h3>Quick Links</h3>
                         <a href="#agenda" class="quick-link">📋 Committee Agenda</a>
@@ -112,7 +332,7 @@
         </div>
     </section>
 
-    <!-- Committee Agenda -->
+
     <section id="agenda" class="committee-agenda">
         <div class="container">
             <h2>Committee Agenda</h2>
@@ -121,7 +341,8 @@
                     <div class="agenda-number">01</div>
                     <div class="agenda-content">
                         <h3>Cyber Warfare and Information Security</h3>
-                        <p>Addressing cyber threats to critical infrastructure, establishing norms for state behavior in cyberspace, and protecting digital sovereignty.</p>
+                        <p>Addressing cyber threats to critical infrastructure, establishing norms for state behavior in
+                            cyberspace, and protecting digital sovereignty.</p>
                         <div class="agenda-tags">
                             <span class="tag">Cyber Security</span>
                             <span class="tag">Information Warfare</span>
@@ -129,12 +350,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="agenda-item">
                     <div class="agenda-number">02</div>
                     <div class="agenda-content">
                         <h3>Prevention of Arms Race in Outer Space</h3>
-                        <p>Preventing the weaponization of space, regulating dual-use space technologies, and ensuring peaceful use of outer space.</p>
+                        <p>Preventing the weaponization of space, regulating dual-use space technologies, and ensuring
+                            peaceful use of outer space.</p>
                         <div class="agenda-tags">
                             <span class="tag">Space Security</span>
                             <span class="tag">PAROS</span>
@@ -142,12 +364,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="agenda-item">
                     <div class="agenda-number">03</div>
                     <div class="agenda-content">
                         <h3>Lethal Autonomous Weapons Systems</h3>
-                        <p>Regulating the development and use of killer robots, establishing human control requirements, and addressing ethical concerns.</p>
+                        <p>Regulating the development and use of killer robots, establishing human control requirements,
+                            and addressing ethical concerns.</p>
                         <div class="agenda-tags">
                             <span class="tag">LAWS</span>
                             <span class="tag">AI Ethics</span>
@@ -155,12 +378,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="agenda-item">
                     <div class="agenda-number">04</div>
                     <div class="agenda-content">
                         <h3>Small Arms and Light Weapons Trade</h3>
-                        <p>Controlling illicit arms flows, implementing the Arms Trade Treaty, and addressing the humanitarian impact of SALW.</p>
+                        <p>Controlling illicit arms flows, implementing the Arms Trade Treaty, and addressing the
+                            humanitarian impact of SALW.</p>
                         <div class="agenda-tags">
                             <span class="tag">Arms Trade</span>
                             <span class="tag">SALW</span>
@@ -168,12 +392,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="agenda-item">
                     <div class="agenda-number">05</div>
                     <div class="agenda-content">
                         <h3>Nuclear Disarmament and Non-Proliferation</h3>
-                        <p>Strengthening the NPT regime, addressing nuclear modernization, and working towards a nuclear-weapon-free world.</p>
+                        <p>Strengthening the NPT regime, addressing nuclear modernization, and working towards a
+                            nuclear-weapon-free world.</p>
                         <div class="agenda-tags">
                             <span class="tag">Nuclear Disarmament</span>
                             <span class="tag">NPT</span>
@@ -185,7 +410,7 @@
         </div>
     </section>
 
-    <!-- Regional Perspectives -->
+
     <section class="political-parties">
         <div class="container">
             <h2>Key Stakeholder Perspectives</h2>
@@ -193,43 +418,49 @@
                 <div class="party-card">
                     <div class="party-symbol">☢️</div>
                     <h3>Nuclear Weapon States</h3>
-                    <p>P5 nations balancing disarmament commitments with security concerns and modernization programs.</p>
+                    <p>P5 nations balancing disarmament commitments with security concerns and modernization programs.
+                    </p>
                 </div>
-                
+
                 <div class="party-card">
                     <div class="party-symbol">🕊️</div>
                     <h3>Non-Aligned Movement</h3>
-                    <p>Advocating for complete disarmament, opposing discriminatory approaches, and promoting peaceful uses.</p>
+                    <p>Advocating for complete disarmament, opposing discriminatory approaches, and promoting peaceful
+                        uses.</p>
                 </div>
-                
+
                 <div class="party-card">
                     <div class="party-symbol">🛡️</div>
                     <h3>NATO Allies</h3>
-                    <p>Coordinated security approach emphasizing deterrence, defense cooperation, and burden sharing.</p>
+                    <p>Coordinated security approach emphasizing deterrence, defense cooperation, and burden sharing.
+                    </p>
                 </div>
-                
+
                 <div class="party-card">
                     <div class="party-symbol">💻</div>
                     <h3>Cyber Powers</h3>
-                    <p>Leading technology nations developing cyber capabilities and norms for responsible state behavior.</p>
+                    <p>Leading technology nations developing cyber capabilities and norms for responsible state
+                        behavior.</p>
                 </div>
-                
+
                 <div class="party-card">
                     <div class="party-symbol">🚀</div>
                     <h3>Space-Faring Nations</h3>
-                    <p>Countries with advanced space capabilities balancing commercial interests with security concerns.</p>
+                    <p>Countries with advanced space capabilities balancing commercial interests with security concerns.
+                    </p>
                 </div>
-                
+
                 <div class="party-card">
                     <div class="party-symbol">🤖</div>
                     <h3>AI Technology Leaders</h3>
-                    <p>Nations at the forefront of AI development addressing autonomous weapons and emerging technologies.</p>
+                    <p>Nations at the forefront of AI development addressing autonomous weapons and emerging
+                        technologies.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Documents Section -->
+
     <section id="documents" class="documents-section">
         <div class="container">
             <h2>Committee Documents</h2>
@@ -237,24 +468,27 @@
                 <div class="document-card">
                     <div class="document-icon">📚</div>
                     <h3>Background Guide</h3>
-                    <p>Comprehensive guide covering all agenda items, technological concepts, and current disarmament issues.</p>
+                    <p>Comprehensive guide covering all agenda items, technological concepts, and current disarmament
+                        issues.</p>
                     <a href="#" class="document-link">Download PDF</a>
                 </div>
-                
+
                 <div class="document-card">
                     <div class="document-icon">📜</div>
                     <h3>Key Treaties & Conventions</h3>
-                    <p>NPT, Chemical Weapons Convention, Arms Trade Treaty, and other relevant disarmament instruments.</p>
+                    <p>NPT, Chemical Weapons Convention, Arms Trade Treaty, and other relevant disarmament instruments.
+                    </p>
                     <a href="#" class="document-link">Download PDF</a>
                 </div>
-                
+
                 <div class="document-card">
                     <div class="document-icon">⚖️</div>
                     <h3>Rules of Procedure</h3>
-                    <p>First Committee procedures, voting rules, and guidelines for resolution drafting and negotiation.</p>
+                    <p>First Committee procedures, voting rules, and guidelines for resolution drafting and negotiation.
+                    </p>
                     <a href="#" class="document-link">Download PDF</a>
                 </div>
-                
+
                 <div class="document-card">
                     <div class="document-icon">🔬</div>
                     <h3>Technical Fact Sheets</h3>
@@ -265,12 +499,13 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
+
     <section class="committee-cta">
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Tackle Global Security Challenges?</h2>
-                <p>Join DISEC and engage with the most pressing security issues of our time. From cyber warfare to space security, help shape the future of international peace and security.</p>
+                <p>Join DISEC and engage with the most pressing security issues of our time. From cyber warfare to space
+                    security, help shape the future of international peace and security.</p>
                 <div class="cta-buttons">
                     <a href="register.html" class="btn btn-primary btn-large">Register for DISEC</a>
                     <a href="resources.html" class="btn btn-secondary btn-large">View All Committees</a>
@@ -279,7 +514,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -317,7 +552,7 @@
                     <div class="contact-info">
                         <p>📧 info@esmun2025.com</p>
                         <p>📱 +91 XXXXX XXXXX</p>
-                        <p>📍 Location TBA</p>
+                        <p>📍 Euroschool HSR</p>
                     </div>
                 </div>
             </div>
@@ -329,4 +564,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

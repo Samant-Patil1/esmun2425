@@ -6,30 +6,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESMUN 2025 - Coming Soon</title>
 
-    <!-- Preconnect to fonts for faster loading -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- Font optimization CSS -->
+
     <link rel="stylesheet" href="css/fonts.css">
 
-    <!-- Main styles -->
+
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Primary fonts with optimized loading -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <style>
+            .resources-hero {
+                padding: 8rem 0 4rem;
+                text-align: center;
+                background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
+            }
+    
+            .resources-hero h1 {
+                font-size: clamp(2.5rem, 6vw, 4rem);
+                font-weight: 800;
+                margin-bottom: 1rem;
+                color: #4fc3f7;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .resources-hero p {
+                font-size: 1.2rem;
+                color: rgba(255, 255, 255, 0.8);
+                max-width: 600px;
+                margin: 0 auto;
+            }
+    
+            .resource-section {
+                padding: 4rem 0;
+                border-bottom: 1px solid rgba(79, 195, 247, 0.1);
+            }
+    
+            .resource-section:last-of-type {
+                border-bottom: none;
+            }
+    
+            .resource-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+    
+            .resource-header h2 {
+                font-size: clamp(2rem, 5vw, 2.8rem);
+                color: #4fc3f7;
+                margin-bottom: 1rem;
+                font-weight: 800;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .resource-header .subtitle {
+                font-size: 1.2rem;
+                color: rgba(255, 255, 255, 0.7);
+                font-style: italic;
+            }
+    
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+    
+            .info-card {
+                text-align: center;
+                padding: 2rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 15px;
+                border: 1px solid rgba(79, 195, 247, 0.2);
+                transition: all 0.3s ease;
+            }
+    
+            .info-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(79, 195, 247, 0.4);
+                box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+            }
+    
+            .info-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                display: block;
+            }
+    
+            .info-card h3 {
+                color: #4fc3f7;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+                font-weight: 700;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .info-card p {
+                color: rgba(255, 255, 255, 0.8);
+                line-height: 1.6;
+            }
+    
+            .esmun-details {
+                background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
+                padding: 4rem 0;
+                margin: 4rem 0;
+            }
+    
+            .details-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+    
+            .detail-card {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(79, 195, 247, 0.2);
+                border-radius: 15px;
+                padding: 2rem;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+    
+            .detail-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(79, 195, 247, 0.4);
+                box-shadow: 0 10px 30px rgba(79, 195, 247, 0.2);
+            }
+    
+            .detail-card .icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+    
+            .detail-card h3 {
+                color: #4fc3f7;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .detail-card p {
+                color: rgba(255, 255, 255, 0.8);
+                line-height: 1.6;
+                margin-bottom: 0.5rem;
+            }
+    
+            .highlight {
+                color: #4fc3f7;
+                font-weight: 600;
+            }
+    
+            .committees-preview {
+                padding: 4rem 0;
+            }
+    
+            .committees-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+    
+            .committee-preview {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(79, 195, 247, 0.2);
+                border-radius: 15px;
+                padding: 1.5rem;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+    
+            .committee-preview:hover {
+                transform: translateY(-5px);
+                border-color: rgba(79, 195, 247, 0.4);
+                box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+            }
+    
+            .committee-preview h3 {
+                color: #4fc3f7;
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+                font-weight: 700;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+    
+            }
+    
+            .committee-preview p {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+    
+            .committee-link {
+                display: inline-block;
+                background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.8rem;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+    
+            .committee-link:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+            }
+        </style>
 </head>
 
 <body>
-    <!-- Animated background particles -->
+
     <div class="particles" id="particles"></div>
 
-    <!-- Header -->
+
     <header id="header">
         <nav>
             <a href="#" class="logo">ESMUN HSR</a>
@@ -46,9 +251,9 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
+
+    <section class="cta-section">
+        <div class="container" style="padding-top: 100px;">
             <h1 class="hero-title">
                 <span class="title-line">ESMUN HSR</span>
                 <span class="title-line">2025</span>
@@ -86,7 +291,7 @@
 
     </section>
 
-    <!-- Updates Section -->
+
     <section id="updates" class="updates-section">
         <div class="container">
             <h2>Updates for Registered Members</h2>
@@ -113,51 +318,54 @@
         </div>
     </section>
 
-    <!-- Committees Preview -->
+
     <section class="committees-preview">
         <div class="container">
-            <h2>Our Committees</h2>
+            <div class="resource-header">
+                <h2>Our Committees</h2>
+                <p class="subtitle">Explore detailed information about each committee</p>
+            </div>
+
             <div class="committees-grid">
-                <div class="committee-card" data-committee="aippm">
+                <div class="committee-preview">
                     <h3>AIPPM</h3>
                     <p>All India Political Parties Meet</p>
-                    <div class="committee-overlay">
-                        <a href="aippm.html" class="btn btn-outline">Learn More</a>
-                    </div>
+                    <img src="images/aippm.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="aippm.html" class="committee-link">Learn More</a>
                 </div>
-                <div class="committee-card" data-committee="unsc">
+
+                <div class="committee-preview">
                     <h3>UNSC</h3>
                     <p>United Nations Security Council</p>
-                    <div class="committee-overlay">
-                        <a href="unsc.html" class="btn btn-outline">Learn More</a>
-                    </div>
+                    <img src="images/unsc.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="unsc.html" class="committee-link">Learn More</a>
                 </div>
-                <div class="committee-card" data-committee="unhrc">
+
+                <div class="committee-preview">
                     <h3>UNHRC</h3>
                     <p>UN Human Rights Council</p>
-                    <div class="committee-overlay">
-                        <a href="unhrc.html" class="btn btn-outline">Learn More</a>
-                    </div>
+                    <img src="images/unhrc.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="unhrc.html" class="committee-link">Learn More</a>
                 </div>
-                <div class="committee-card" data-committee="disec">
+
+                <div class="committee-preview">
                     <h3>DISEC</h3>
                     <p>Disarmament & International Security</p>
-                    <div class="committee-overlay">
-                        <a href="disec.html" class="btn btn-outline">Learn More</a>
-                    </div>
+                    <img src="images/disec.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="disec.html" class="committee-link">Learn More</a>
                 </div>
-                <div class="committee-card" data-committee="ccc">
+
+                <div class="committee-preview">
                     <h3>CCC</h3>
                     <p>Crisis Control Committee</p>
-                    <div class="committee-overlay">
-                        <a href="ccc.html" class="btn btn-outline">Learn More</a>
-                    </div>
+                    <img src="images/ccc.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="ccc.html" class="committee-link">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
+
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -172,7 +380,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -210,7 +418,7 @@
                     <div class="contact-info">
                         <p>📧 info@esmun2025.com</p>
                         <p>📱 +91 XXXXX XXXXX</p>
-                        <p>📍 Location TBA</p>
+                        <p>📍 Euroschool HSR</p>
                     </div>
                 </div>
             </div>
