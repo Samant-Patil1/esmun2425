@@ -227,6 +227,100 @@
                 transform: translateY(-2px);
                 box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
             }
+
+            /* Principal's Message Styles */
+            .principal-message {
+                padding: 5rem 0;
+                background: linear-gradient(135deg, rgba(79, 195, 247, 0.08), rgba(41, 182, 246, 0.08));
+            }
+
+            .principal-content {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 3rem;
+                align-items: start;
+            }
+
+            .principal-photo {
+                text-align: center;
+            }
+
+            .photo-frame {
+                width: 250px;
+                height: 300px;
+                margin: 0 auto;
+                border-radius: 15px;
+                overflow: hidden;
+                border: 3px solid rgba(79, 195, 247, 0.3);
+                box-shadow: 0 10px 30px rgba(79, 195, 247, 0.2);
+            }
+
+            .photo-frame img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .message-header h2 {
+                color: #4fc3f7;
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 0.5rem;
+                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
+            }
+
+            .message-header .subtitle {
+                color: rgba(79, 195, 247, 0.8);
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 2rem;
+                font-style: italic;
+            }
+
+            .message-content p {
+                color: rgba(255, 255, 255, 0.9);
+                line-height: 1.8;
+                margin-bottom: 1.5rem;
+                text-align: justify;
+            }
+
+            .signature {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(79, 195, 247, 0.2);
+            }
+
+            .signature p {
+                margin-bottom: 0.3rem;
+                text-align: left !important;
+            }
+
+            .signature strong {
+                color: #4fc3f7;
+                font-size: 1.1rem;
+            }
+
+            .signature em {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 768px) {
+                .principal-content {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                    text-align: center;
+                }
+
+                .photo-frame {
+                    width: 200px;
+                    height: 240px;
+                }
+
+                .message-header h2 {
+                    font-size: 2rem;
+                }
+            }
         </style>
 </head>
 
@@ -318,6 +412,49 @@
         </div>
     </section>
 
+    <!-- Principal's Message Section -->
+    <section class="principal-message">
+        <div class="container">
+            <div class="principal-content">
+                <div class="principal-photo">
+                    <div class="photo-frame">
+                        <img src="images/principal-photo.jpg" alt="Kavitha Neelayath - Principal, EuroSchool HSR" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder-text" style="display: none; padding: 2rem; text-align: center; color: rgba(255,255,255,0.5); border: 2px dashed rgba(79, 195, 247, 0.3); border-radius: 15px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            📷<br>Principal's Photo<br><small>images/principal-photo.jpg</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="principal-text">
+                    <div class="message-header">
+                        <h2>Principal's Message</h2>
+                        <div class="subtitle">ESHSR MUN 2025</div>
+                    </div>
+                    <div class="message-content">
+                        <p>Greetings Delegates, Mentors, and Esteemed Guests,</p>
+                        
+                        <p>It gives me immense pride and joy to welcome you to the inaugural edition of ESHSR Model United Nations (ESHSR-MUN) 2025 — a platform where young minds come together to debate, deliberate, and devise solutions for global issues with intelligence, empathy, and purpose.</p>
+                        
+                        <p>At EuroSchool, we believe education is not confined to textbooks alone — it is about nurturing voices that can shape a better world. This MUN is an opportunity for our students to step into the shoes of global leaders, explore the intricacies of international diplomacy, and engage in meaningful discourse that transcends boundaries.</p>
+                        
+                        <p>In a world that is increasingly complex and interconnected, the ability to listen, understand diverse viewpoints, and negotiate peacefully is more vital than ever. ESHSR-MUN serves as a reflection of our commitment to empowering students with critical thinking, leadership skills, and a deep sense of global responsibility.</p>
+                        
+                        <p>As you take on roles that demand intellectual rigour and moral courage, I encourage you to lead with authenticity, speak with conviction, and act with integrity. May your time here ignite a spark — not just to discuss change, but to become the change.</p>
+                        
+                        <p>I extend my heartfelt appreciation to the Secretariat, Faculty Advisors, and the Organising Committee whose tireless efforts have made this event possible. To all the delegates — may this experience enrich you, challenge you, and inspire you to look beyond yourself and towards the greater good.</p>
+                        
+                        <p>Wishing you all a successful and impactful MUN conference.</p>
+                        
+                        <div class="signature">
+                            <p><strong>Warm regards,</strong></p>
+                            <p><strong>Kavitha Neelayath</strong></p>
+                            <p><em>Principal, EuroSchool HSR</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="committees-preview">
         <div class="container">
@@ -337,28 +474,28 @@
                 <div class="committee-preview">
                     <h3>UNSC</h3>
                     <p>United Nations Security Council</p>
-                    <img src="images/unsc.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <img src="images/unsc.png" alt="UNSC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
                     <a href="unsc.html" class="committee-link">Learn More</a>
                 </div>
 
                 <div class="committee-preview">
                     <h3>UNHRC</h3>
                     <p>UN Human Rights Council</p>
-                    <img src="images/unhrc.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <img src="images/unhrc.png" alt="UNHRC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
                     <a href="unhrc.html" class="committee-link">Learn More</a>
                 </div>
 
                 <div class="committee-preview">
                     <h3>DISEC</h3>
                     <p>Disarmament & International Security</p>
-                    <img src="images/disec.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <img src="images/disec.png" alt="DISEC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
                     <a href="disec.html" class="committee-link">Learn More</a>
                 </div>
 
                 <div class="committee-preview">
                     <h3>CCC</h3>
                     <p>Crisis Control Committee</p>
-                    <img src="images/ccc.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <img src="images/ccc.png" alt="CCC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
                     <a href="ccc.html" class="committee-link">Learn More</a>
                 </div>
             </div>
@@ -406,11 +543,11 @@
                 <div class="footer-section">
                     <h4>Committees</h4>
                     <ul class="footer-links">
-                        <li><a href="resources.html#aippm">AIPPM</a></li>
-                        <li><a href="resources.html#unsc">UNSC</a></li>
-                        <li><a href="resources.html#unhrc">UNHRC</a></li>
-                        <li><a href="resources.html#disec">DISEC</a></li>
-                        <li><a href="resources.html#ccc">CCC</a></li>
+                        <li><a href="aippm.html">AIPPM</a></li>
+                        <li><a href="unsc.html">UNSC</a></li>
+                        <li><a href="unhrc.html">UNHRC</a></li>
+                        <li><a href="disec.html">DISEC</a></li>
+                        <li><a href="ccc.html">CCC</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
