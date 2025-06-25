@@ -305,8 +305,25 @@
                 font-size: 0.95rem;
             }
 
+            /* Secretary General's Message Styles */
+            .secretary-message {
+                padding: 5rem 0;
+                background: linear-gradient(135deg, rgba(79, 195, 247, 0.08), rgba(41, 182, 246, 0.08));
+            }
+
+            .secretary-content {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 3rem;
+                align-items: start;
+            }
+
+            .secretary-photo {
+                text-align: center;
+            }
+
             @media (max-width: 768px) {
-                .principal-content {
+                .principal-content, .secretary-content {
                     grid-template-columns: 1fr;
                     gap: 2rem;
                     text-align: center;
@@ -321,6 +338,52 @@
                     font-size: 2rem;
                 }
             }
+
+            /* Fix the background image in hero section */
+            .cta-section {
+                position: relative;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: linear-gradient(
+                    135deg,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0.4) 35%,
+                    rgba(0, 0, 0, 0.3) 50%,
+                    rgba(0, 0, 0, 0.4) 65%,
+                    rgba(0, 0, 0, 0.6) 100%
+                ), url('images/stringio.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                overflow: hidden;
+            }
+
+            .cta-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.3) 25%,
+                    rgba(0, 0, 0, 0.1) 50%,
+                    rgba(0, 0, 0, 0.3) 75%,
+                    rgba(0, 0, 0, 0.7) 100%
+                );
+                z-index: 1;
+            }
+
+            .cta-section .container {
+                position: relative;
+                z-index: 2;
+                text-align: center;
+            }
         </style>
 </head>
 
@@ -334,7 +397,7 @@
             <a href="#" class="logo">ESMUN HSR</a>
             <ul class="nav-links">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="resources.html">RESOURCES</a></li>
+                <li><a href="resources.html">COMMITTEES</a></li>
                 <li><a href="register.html" class="register-btn">REGISTER</a></li>
             </ul>
             <div class="mobile-menu-toggle" id="mobile-menu">
@@ -346,7 +409,7 @@
     </header>
 
 
-    <section class="cta-section" style="background-image: url('images/stringio.jpg');">
+    <section class="cta-section">
         <div class="container" style="padding-top: 100px;">
             <h1 class="hero-title">
                 <span class="title-line">ESMUN HSR</span>
@@ -378,35 +441,56 @@
             </div>
 
             <div class="hero-buttons">
-                <a href="#updates" class="btn btn-primary">GET UPDATES</a>
-                <a href="register.html" class="btn btn-secondary">REGISTER NOW</a>
+                <a href="register.html" class="btn btn-primary">REGISTER NOW</a>
+                <a href="resources.html" class="btn btn-secondary">LEARN MORE</a>
             </div>
         </div>
 
     </section>
 
 
-    <section id="updates" class="updates-section">
+    <!-- Committees Section -->
+    <section class="committees-preview">
         <div class="container">
-            <h2>Updates for Registered Members</h2>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <div class="update-icon">📅</div>
-                    <h3>Conference Dates</h3>
-                    <p>Mark your calendars! ESMUN 2025 will be held in the upcoming academic year. Exact dates will be
-                        announced soon.</p>
+            <div class="resource-header">
+                <h2>Our Committees</h2>
+                <p class="subtitle">Explore detailed information about each committee</p>
+            </div>
+
+            <div class="committees-grid">
+                <div class="committee-preview">
+                    <h3>AIPPM</h3>
+                    <p>All India Political Parties Meet</p>
+                    <img src="images/aippm.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="aippm.html" class="committee-link">Learn More</a>
                 </div>
-                <div class="update-card">
-                    <div class="update-icon">🏛️</div>
-                    <h3>Committees Available</h3>
-                    <p>Five exciting committees await: AIPPM, UNSC, UNHRC, DISEC, and CCC. Each offering unique
-                        diplomatic challenges.</p>
+
+                <div class="committee-preview">
+                    <h3>UNSC</h3>
+                    <p>United Nations Security Council</p>
+                    <img src="images/unsc.png" alt="UNSC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="unsc.html" class="committee-link">Learn More</a>
                 </div>
-                <div class="update-card">
-                    <div class="update-icon">🎯</div>
-                    <h3>Early Bird Registration</h3>
-                    <p>Special pricing available for early registrations. Don't miss out on this limited-time
-                        opportunity!</p>
+
+                <div class="committee-preview">
+                    <h3>UNHRC</h3>
+                    <p>UN Human Rights Council</p>
+                    <img src="images/unhrc.png" alt="UNHRC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="unhrc.html" class="committee-link">Learn More</a>
+                </div>
+
+                <div class="committee-preview">
+                    <h3>DISEC</h3>
+                    <p>Disarmament & International Security</p>
+                    <img src="images/disec.png" alt="DISEC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="disec.html" class="committee-link">Learn More</a>
+                </div>
+
+                <div class="committee-preview">
+                    <h3>CCC</h3>
+                    <p>Continuous Crisis Committee</p>
+                    <img src="images/ccc.png" alt="CCC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
+                    <a href="ccc.html" class="committee-link">Learn More</a>
                 </div>
             </div>
         </div>
@@ -455,55 +539,51 @@
         </div>
     </section>
 
-
-    <section class="committees-preview">
+    <!-- Secretary General's Message Section -->
+    <section class="secretary-message">
         <div class="container">
-            <div class="resource-header">
-                <h2>Our Committees</h2>
-                <p class="subtitle">Explore detailed information about each committee</p>
-            </div>
-
-            <div class="committees-grid">
-                <div class="committee-preview">
-                    <h3>AIPPM</h3>
-                    <p>All India Political Parties Meet</p>
-                    <img src="images/aippm.png" alt="AIPPM Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
-                    <a href="aippm.html" class="committee-link">Learn More</a>
+            <div class="secretary-content">
+                <div class="secretary-photo">
+                    <div class="photo-frame">
+                        <img src="images/aaryan_patil.jpg" alt="Aaryan Patil - Secretary General, ESMUN 2025" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder-text" style="display: none; padding: 2rem; text-align: center; color: rgba(255,255,255,0.5); border: 2px dashed rgba(79, 195, 247, 0.3); border-radius: 15px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            📷<br>Secretary General's Photo<br><small>images/aaryan_patil.jpg</small>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="committee-preview">
-                    <h3>UNSC</h3>
-                    <p>United Nations Security Council</p>
-                    <img src="images/unsc.png" alt="UNSC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
-                    <a href="unsc.html" class="committee-link">Learn More</a>
-                </div>
-
-                <div class="committee-preview">
-                    <h3>UNHRC</h3>
-                    <p>UN Human Rights Council</p>
-                    <img src="images/unhrc.png" alt="UNHRC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
-                    <a href="unhrc.html" class="committee-link">Learn More</a>
-                </div>
-
-                <div class="committee-preview">
-                    <h3>DISEC</h3>
-                    <p>Disarmament & International Security</p>
-                    <img src="images/disec.png" alt="DISEC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
-                    <a href="disec.html" class="committee-link">Learn More</a>
-                </div>
-
-                <div class="committee-preview">
-                    <h3>CCC</h3>
-                    <p>Crisis Control Committee</p>
-                    <img src="images/ccc.png" alt="CCC Logo" class="committee-logo" style="height: 100px; object-fit: cover;">
-                    <a href="ccc.html" class="committee-link">Learn More</a>
+                <div class="secretary-text">
+                    <div class="message-header">
+                        <h2>Secretary General's Message</h2>
+                        <div class="subtitle">ESMUN 2025 | HSR</div>
+                    </div>
+                    <div class="message-content">
+                        <p>Dear Delegates and Faculty Advisors,</p>
+                        
+                        <p>It is my pleasure to invite you to Euroschool HSR's premier Model UN conference which will be held at Euroschool HSR the 24th and 25th of July. I am Aaryan Patil, a Journalism and Mass Communications student at Manipal Academy of Higher Edition and an alumni of Euroschool HSR.</p>
+                        
+                        <p>I've eagerly awaited this conference and it is the result of a 2 year trail and error stage, and now with it finally in action it's given me a sense of relief. The aim of this conference is to instill the spirit of diplomacy and nurture conflict resolution amongst the younger generation.</p>
+                        
+                        <p>At ESMUN we plan to emulate a total of 5 committees with a great Executive Board, these committees will tackle complex agendas and put the delegates capabilities to the test. With topics ranging from Press Censorship to the Srebrenica Massacre, the delegates are bound to have an enriching learning experience.</p>
+                        
+                        <p><em>"All war is the failure of diplomacy"</em></p>
+                        
+                        <p>As the world goes through a tough time and diplomats struggle to find answers, delegates are expected to find answers to some of the most complex questions. The expectations have been set, all that's left is to let your voice be heard.</p>
+                        
+                        <p>That being said I wish you all the very best and I hope to see you at the premier edition of ESMUN-2025, HSR!</p>
+                        
+                        <div class="signature">
+                            <p><strong>Aaryan Patil</strong></p>
+                            <p><em>Secretary General</em></p>
+                            <p><em>ESMUN-2025 | HSR</em></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="cta-section">
+    <section class="cta-section" style="height: auto; background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1)); background-image: none; padding: 6rem 0;">
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Make Your Mark?</h2>
@@ -535,7 +615,7 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="resources.html">Committees</a></li>
                         <li><a href="register.html">Register</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
@@ -553,7 +633,7 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <div class="contact-info">
-                        <p>📧 info@esmun2025.com</p>
+                        <p>📧 esmun@es13.euroschoolindia.com</p>
                         <p>📱 +91 XXXXX XXXXX</p>
                         <p>📍 Euroschool HSR</p>
                     </div>

@@ -14,211 +14,6 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-        <style>
-            .resources-hero {
-                padding: 8rem 0 4rem;
-                text-align: center;
-                background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
-            }
-    
-            .resources-hero h1 {
-                font-size: clamp(2.5rem, 6vw, 4rem);
-                font-weight: 800;
-                margin-bottom: 1rem;
-                color: #4fc3f7;
-                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
-    
-            }
-    
-            .resources-hero p {
-                font-size: 1.2rem;
-                color: rgba(255, 255, 255, 0.8);
-                max-width: 600px;
-                margin: 0 auto;
-            }
-    
-            .resource-section {
-                padding: 4rem 0;
-                border-bottom: 1px solid rgba(79, 195, 247, 0.1);
-            }
-    
-            .resource-section:last-of-type {
-                border-bottom: none;
-            }
-    
-            .resource-header {
-                text-align: center;
-                margin-bottom: 3rem;
-            }
-    
-            .resource-header h2 {
-                font-size: clamp(2rem, 5vw, 2.8rem);
-                color: #4fc3f7;
-                margin-bottom: 1rem;
-                font-weight: 800;
-                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
-    
-            }
-    
-            .resource-header .subtitle {
-                font-size: 1.2rem;
-                color: rgba(255, 255, 255, 0.7);
-                font-style: italic;
-            }
-    
-            .info-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-            }
-    
-            .info-card {
-                text-align: center;
-                padding: 2rem;
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 15px;
-                border: 1px solid rgba(79, 195, 247, 0.2);
-                transition: all 0.3s ease;
-            }
-    
-            .info-card:hover {
-                transform: translateY(-5px);
-                border-color: rgba(79, 195, 247, 0.4);
-                box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
-            }
-    
-            .info-icon {
-                font-size: 3rem;
-                margin-bottom: 1rem;
-                display: block;
-            }
-    
-            .info-card h3 {
-                color: #4fc3f7;
-                margin-bottom: 1rem;
-                font-size: 1.3rem;
-                font-weight: 700;
-                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
-    
-            }
-    
-            .info-card p {
-                color: rgba(255, 255, 255, 0.8);
-                line-height: 1.6;
-            }
-    
-            .esmun-details {
-                background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
-                padding: 4rem 0;
-                margin: 4rem 0;
-            }
-    
-            .details-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 2rem;
-            }
-    
-            .detail-card {
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(79, 195, 247, 0.2);
-                border-radius: 15px;
-                padding: 2rem;
-                text-align: center;
-                transition: all 0.3s ease;
-            }
-    
-            .detail-card:hover {
-                transform: translateY(-5px);
-                border-color: rgba(79, 195, 247, 0.4);
-                box-shadow: 0 10px 30px rgba(79, 195, 247, 0.2);
-            }
-    
-            .detail-card .icon {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-    
-            .detail-card h3 {
-                color: #4fc3f7;
-                margin-bottom: 1rem;
-                font-size: 1.2rem;
-                font-weight: 700;
-                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
-    
-            }
-    
-            .detail-card p {
-                color: rgba(255, 255, 255, 0.8);
-                line-height: 1.6;
-                margin-bottom: 0.5rem;
-            }
-    
-            .highlight {
-                color: #4fc3f7;
-                font-weight: 600;
-            }
-    
-            .committees-preview {
-                padding: 4rem 0;
-            }
-    
-            .committees-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1.5rem;
-            }
-    
-            .committee-preview {
-                background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(79, 195, 247, 0.2);
-                border-radius: 15px;
-                padding: 1.5rem;
-                text-align: center;
-                transition: all 0.3s ease;
-            }
-    
-            .committee-preview:hover {
-                transform: translateY(-5px);
-                border-color: rgba(79, 195, 247, 0.4);
-                box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
-            }
-    
-            .committee-preview h3 {
-                color: #4fc3f7;
-                margin-bottom: 0.5rem;
-                font-size: 1.1rem;
-                font-weight: 700;
-                font-family: 'Satoshi', 'Inter', 'Segoe UI', sans-serif;
-    
-            }
-    
-            .committee-preview p {
-                color: rgba(255, 255, 255, 0.7);
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
-    
-            .committee-link {
-                display: inline-block;
-                background: linear-gradient(135deg, #4fc3f7, #29b6f6);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 0.8rem;
-                transition: all 0.3s ease;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-            }
-    
-            .committee-link:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
-            }
-        </style>
 </head>
 
 <body>
@@ -231,7 +26,7 @@
             <a href="index.html" class="logo">ESMUN</a>
             <ul class="nav-links">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="resources.html">RESOURCES</a></li>
+                <li><a href="resources.html">COMMITTEES</a></li>
                 <li><a href="register.html" class="register-btn">REGISTER</a></li>
             </ul>
             <div class="mobile-menu-toggle" id="mobile-menu">
@@ -250,20 +45,6 @@
             <h2>Disarmament and International Security Committee</h2>
             <p>The First Committee of the UN General Assembly dealing with global security challenges and disarmament
             </p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">193</span>
-                    <span class="stat-label">UN Member States</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Key Security Areas</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Annual Resolutions</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -286,17 +67,6 @@
                         cyber warfare, space militarization, emerging technologies, and traditional disarmament issues.
                         The committee requires analytical thinking and innovative approaches to complex security
                         dilemmas.</p>
-
-                    <div class="key-features">
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>Comprehensive Scope:</strong> All aspects of international security and
-                                disarmament</li>
-                            <li><strong>Emerging Technologies:</strong> AI, cyber warfare, and space security</li>
-                            <li><strong>Global Participation:</strong> All UN member states participate</li>
-                            <li><strong>Technical Expertise:</strong> Focus on scientific and technical aspects</li>
-                        </ul>
-                    </div>
                 </div>
 
                 <div class="overview-sidebar">
@@ -324,7 +94,6 @@
                         <h3>Quick Links</h3>
                         <a href="#agenda" class="quick-link">📋 Committee Agenda</a>
                         <a href="#documents" class="quick-link">📄 Background Guide</a>
-                        <a href="#" class="quick-link">🎯 Position Paper Guide</a>
                         <a href="register.html" class="quick-link register">🚀 Register Now</a>
                     </div>
                 </div>
@@ -349,56 +118,6 @@
                             <span class="tag">Regional Security</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="political-parties">
-        <div class="container">
-            <h2>Key Stakeholder Perspectives</h2>
-            <div class="parties-grid">
-                <div class="party-card">
-                    <div class="party-symbol">☢️</div>
-                    <h3>Nuclear Weapon States</h3>
-                    <p>P5 nations balancing disarmament commitments with security concerns and modernization programs.
-                    </p>
-                </div>
-
-                <div class="party-card">
-                    <div class="party-symbol">🕊️</div>
-                    <h3>Non-Aligned Movement</h3>
-                    <p>Advocating for complete disarmament, opposing discriminatory approaches, and promoting peaceful
-                        uses.</p>
-                </div>
-
-                <div class="party-card">
-                    <div class="party-symbol">🛡️</div>
-                    <h3>NATO Allies</h3>
-                    <p>Coordinated security approach emphasizing deterrence, defense cooperation, and burden sharing.
-                    </p>
-                </div>
-
-                <div class="party-card">
-                    <div class="party-symbol">💻</div>
-                    <h3>Cyber Powers</h3>
-                    <p>Leading technology nations developing cyber capabilities and norms for responsible state
-                        behavior.</p>
-                </div>
-
-                <div class="party-card">
-                    <div class="party-symbol">🚀</div>
-                    <h3>Space-Faring Nations</h3>
-                    <p>Countries with advanced space capabilities balancing commercial interests with security concerns.
-                    </p>
-                </div>
-
-                <div class="party-card">
-                    <div class="party-symbol">🤖</div>
-                    <h3>AI Technology Leaders</h3>
-                    <p>Nations at the forefront of AI development addressing autonomous weapons and emerging
-                        technologies.</p>
                 </div>
             </div>
         </div>
@@ -476,7 +195,7 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="resources.html">Committees</a></li>
                         <li><a href="register.html">Register</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
@@ -494,7 +213,7 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <div class="contact-info">
-                        <p>📧 info@esmun2025.com</p>
+                        <p>📧 esmun@es13.euroschoolindia.com</p>
                         <p>📱 +91 XXXXX XXXXX</p>
                         <p>📍 Euroschool HSR</p>
                     </div>
